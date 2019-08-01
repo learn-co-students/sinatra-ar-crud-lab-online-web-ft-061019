@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+   <h2>List of Articles</h2>
    <ul>
       <% @articles.each do |article| %>
-         <a href="/articles/<%=article.id%>"><%=article.title%></a>
+         <li><a href="/articles/<%=article.id%>"><%=article.title%></a></li>
       <% end %>
    </ul>
 </html>

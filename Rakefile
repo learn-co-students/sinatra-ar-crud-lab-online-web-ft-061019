@@ -9,3 +9,8 @@ require './app/controllers/application_controller'
 task :console do
   Pry.start
 end
+
+task :migrations do
+  puts "migrating databases..."
+  system("rake db:migrate && rake db:migrate SINATRA_ENV=test")
+end
